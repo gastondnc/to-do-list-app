@@ -1,0 +1,43 @@
+
+<!-- Container From -->
+<div class="container">
+  <div class="new-task-form">
+    <form #newTaskForm="ngForm" (ngSubmit)="submitForm(newTaskForm)">
+      <label class="mb-1">Title</label>
+      <input
+        [ngModel]="editTask?.title"
+        required
+        type="text"
+        name="title"
+        class="input-group mb-3 p-1"
+      />
+      <label class="mb-1">Description</label>
+        <input
+          [ngModel]="editTask?.description"
+          required
+          type="text"
+          name="description"
+          class="input-group mb-3 p-1"
+        />
+        <label class="mb-1">Status</label>
+        <select
+          [ngModel]="editTask !== undefined ? editTask.status : statusTasks[0]"
+          name="status"
+          class="form-select"
+        >
+        <option *ngFor="let status of statusTasks"
+        selected
+        [value]="status"
+        >
+          {{status}}
+        </option>
+      </select>
+      <button [disabled]="!newTaskForm.valid" class="btn btn-primary mt-3 btn-lg" type="submit">
+        Send
+      </button>
+    </form>
+  </div>
+</div>
+<!-- End Container Form -->
+
+

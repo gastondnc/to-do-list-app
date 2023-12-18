@@ -1,0 +1,15 @@
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.todo-item-detail {
+  display: flex;
+  gap: 10px;
+}
+.todo-item-btn {
+  display: flex;
+  gap: 10px;
+
+}

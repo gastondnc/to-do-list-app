@@ -1,0 +1,15 @@
+<div class="todo-item p-1">
+  <div class="todo-item-detail">
+    <p>{{ item.title }}</p>
+    <p>{{ item.description }}</p>
+    <p>{{ item.status }}</p>
+  </div>
+  <div class="todo-item-btn">
+    <button class="btn btn-warning btn-md" (click)="editHandler(index)">
+      Edit
+    </button>
+    <button class="btn btn-danger  btn-sm" (click)="deleteHandler(index)">
+      Delete
+    </button>
+  </div>
+</div>
